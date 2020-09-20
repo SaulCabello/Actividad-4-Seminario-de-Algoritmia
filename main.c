@@ -1,5 +1,30 @@
 #include <stdio.h>
 
+void capturar_enteros() {
+    int enteros[5];
+    int i;
+    float promedio;
+    int suma = 0;
+    
+	printf("ingrese los 5 numeros:\n");
+	
+    for (i = 0; i < 5; i++)
+    {
+        scanf("%i", &enteros[i]);
+    }
+    system("cls");
+    for (i = 0; i < 5; i++)
+    {
+        printf("%i\n", enteros[i]);
+    }
+    for (i = 0; i < 5; i++)
+    {
+        suma = suma + enteros[i];
+    }
+    printf("Suma: %i\n", suma);
+    printf("Promedio: %f\n", suma/5.0);    
+}
+
 int main() {
     char op;
     
@@ -10,11 +35,13 @@ int main() {
         printf("3) Agrega personaje\n");
         printf("4) Mostrar personajes\n");
         printf("0) Salir\n");
-        scanf("%c", &op);
+        fflush(stdin);
+		scanf("%c", &op);
 
         switch (op)
         {
         case '1':
+        	capturar_enteros();
             break;
         case '2':
             break;
@@ -23,7 +50,6 @@ int main() {
         case '4':
             break;
         default:
-        	printf("opcion fuera de rango\n");
 			break;
         }
 
