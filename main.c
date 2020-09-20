@@ -67,6 +67,7 @@ int main() {
         	capturar_personajes();
             break;
         case '4':
+        	mostrar_personajes();
             break;
         default:
 			break;
